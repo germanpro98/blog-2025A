@@ -6,3 +6,7 @@ media
 staticfiles
 .env
 *.sqlite3
+requirements.txt
+requirements.txt
+blog/blog.db
+
