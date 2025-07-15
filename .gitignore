@@ -4,3 +4,5 @@ db.sqlite3
 .vscode
 media
 staticfiles
+.env
+*.sqlite3
