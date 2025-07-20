@@ -4,9 +4,10 @@ db.sqlite3
 .vscode
 media
 staticfiles
-#.env
+.env
 #*.sqlite3
 #requirements.txt
 #requirements.txt
 #blog/blog.db
+
 
