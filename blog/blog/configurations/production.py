@@ -13,15 +13,15 @@ DATABASES = {
         #En caso de usar una postgres utilizo: 'ENGINE': 'django.db.backends.postgresql'
         #En caso de usar una mysql utilizo: 'ENGINE': 'django.db.backends.mysql'
 
-        'NAME': os.getenv('DB_NAME'),
+        # 'NAME': os.getenv('DB_NAME'),
 
-        'USER': os.getenv('DB_USER'),
+        # 'USER': os.getenv('DB_USER'),
 
-        'PASSWORD': os.getenv('DB_PASSWORD'),
+        # 'PASSWORD': os.getenv('DB_PASSWORD'),
 
-        'HOST': os.getenv('DB_HOST'),  # Por defecto localhost
+        # 'HOST': os.getenv('DB_HOST'),  # Por defecto localhost
 
-        'PORT': os.getenv('DB_PORT'),  # Por defecto 3306 para MySQL
+        # 'PORT': os.getenv('DB_PORT'),  # Por defecto 3306 para MySQL
     }
 }
 
