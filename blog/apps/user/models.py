@@ -16,7 +16,17 @@ class User(AbstractUser):
     alias = models.CharField(max_length=50, blank=True)
     avatar = models.ImageField(upload_to=get_avatar_filename, default='user/default/avatar_default.png')
     
+
     def __str__(self):
         return self.username
-    
-    
+
+    @property
+    def is_registered(self):
+        return self.groups.filter(name='registered').exists()   # This method checks if the user is part of the 'registered' group
+
+    @property
+    def is_colaborator(self):
+        return self.groups.filter(name='Colaborator').exists()
+    @property
+    def is_admin(self):
+        return self.groups.filter(name='Admin').exists()
