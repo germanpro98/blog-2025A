@@ -17,7 +17,7 @@ class Category(models.Model):
 class Post(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=200)
-    slug = models.SlugField(unique=True, max_length=200, blanck=True)
+    slug = models.SlugField(unique=True, max_length=200, blank=True)
     content = models.TextField(max_length=10000)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, related_name='posts', blank=True, null=True)

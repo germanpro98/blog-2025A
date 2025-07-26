@@ -14,9 +14,9 @@ def get_avatar_filename(instance, filename):
 class User(AbstractUser):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     alias = models.CharField(max_length=50, blank=True)
-    avatar = models.ImageField(upload_to=get_avatar_filename, default='user/default/avatar_default.png') #MODELO CON UNA SOLA IMAGEN
+    email = models.EmailField(unique=True, null=False)
+    avatar = models.ImageField(upload_to=get_avatar_filename, default='user/default/avatar_default.png') #MODELO CON UNA SOLA IMAGEN)
     
-
     def __str__(self):
         return self.username
 
