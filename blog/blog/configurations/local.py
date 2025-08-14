@@ -1,6 +1,7 @@
-from .base import *
+from .base import *    #importacion de ajustes en base.py
 
 DEBUG = True
+
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 

@@ -8,7 +8,8 @@ def get_avatar_filename(instance, filename):
     # avatar_default.jpg
 
     base_filename, file_extension = os.path.splitext(filename)
-    new_filename = f"user_{instance.id}_avatar{file_extension}"
+    new_filename = f"user_{instance.id}_avatar{file_extension}" 
+    
     return os.path.join('user/avatar/', new_filename)
 
 class User(AbstractUser):
@@ -30,3 +31,8 @@ class User(AbstractUser):
     @property
     def is_admin(self):
         return self.groups.filter(name='Admin').exists()
+    
+def get_avatar_url(self):
+    if self.avatar and hasattr(self.avatar, 'url'):
+        return self.avatar.url
+    return None
