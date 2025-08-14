@@ -3,6 +3,8 @@ __pycache__
 db.sqlite3
 .vscode
 media
+blog/media/**/avatar
+blog/media/**/cover
 staticfiles
 .env
 #*.sqlite3
