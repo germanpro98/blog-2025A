@@ -1,7 +1,23 @@
-<header
-  class="h-14 flex justify-center items-center text-white bg-orange-500 gap-4"
->
-  <div class="container flex justify-between bg-red-500 mx-4 md:mx-8 lg:mx-40">
-    BLOG {% include 'components/ui/navbar.html' %}
+<header class="h-14 bg-yellow-800 text-white flex items-center">
+  <div class="container mx-auto px-4 lg:px-40 flex items-center justify-between w-full">
+    <h1 class="text-lg font-bold">BLOG</h1>
+    
+    <!--Barra de búsqueda 
+    <div class="flex-1 flex justify-center">
+      <form action="{% url 'post:post_list' %}" method="GET" class="relative w-full max-w-md">
+        <input type="text" name="search_query" placeholder="Buscar..." 
+               class="w-full pl-4 pr-10 py-1 rounded-full border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-gray-400">
+        <button type="submit" class="absolute right-3 top-1/2 transform -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+          </svg>
+        </button>
+      </form>
+    </div>-->
+
+    <div>
+      {% include 'components/ui/navbar.html' %}
+    </div>
+
   </div>
 </header>

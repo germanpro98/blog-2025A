@@ -1,0 +1,32 @@
+{% extends 'layouts/auth_layout.html' %}
+{% load static %}   <!--para cargar el Icono-->
+
+{% block title %} Iniciar sesión {% endblock title %} 
+
+{% block content %}
+<section class="max-w-md mx-auto mt-2 p-8 bg-white shadow-md rounded text-center">
+      <a href="{% url 'home' %}" class="absolute top-4 left-4 bg-blue-900 text-white px-4 py-2 rounded hover:bg-yellow-950">
+    Volver
+  </a>
+     <!-- Icono de autenticacion de usuario -->
+    <img src="{% static 'assets/svg/user-round-check.svg' %}" alt="Icono de autenticación" class="w-16 h-16 mx-auto mt-10 mb-6" />
+
+    <h1 class="text-2xl font-bold text-gray-800 mb-6">Iniciar sesión</h1>
+
+    <form method="POST" enctype="multipart/form-data" class="space-y-4">
+    {% csrf_token %}
+
+    {{ form.as_p }}  <!--genera los inputs-->
+
+        <button type="submit" class="w-full bg-blue-950 text-white py-2 rounded hover:bg-yellow-950 transition">
+            Iniciar sesión
+        </button>
+    </form>
+    <div class="text-center">
+        <a href="{% url 'user:auth_register' %}" class="text-sm text-blue-900 hover:underline">
+          ¿No tenés cuenta? Registrate
+        </a>
+  </div>
+</section>
+{% endblock content %}
+    
